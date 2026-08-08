@@ -1,7 +1,22 @@
-from car import Car
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        self.is_alive = True;
 
-car1 = Car("mustang", 2025, "red", False)
+    def eat(self):
+        print(f"{self.name} is eating")
 
 
-car1.stop()
+    def sleep(self):
+        print(f"{self.name} is sleeping")
 
+
+class Dog(Animal):
+    pass       
+
+class Cat(Animal):
+    pass
+
+
+dog = Dog("scooby")
+cat = Cat("garfild")
