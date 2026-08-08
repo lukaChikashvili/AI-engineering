@@ -1,15 +1,25 @@
+class Library:
+    def __init__(self, name):
+        self.name = name
+        self.books = []
+
+    def add_book(self, book):
+        self.books.append(book)
 
 
-class Shape:
-    def ___init__(self, color, is_filled):
-        self.color = color
-        self.is_filled = is_filled
+    def list_books(self):
+        return [f"{book.title} by {book.author}" for book in self.books]
+
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
 
 
+library = Library("zugdidi library")
 
-class Circle:
-    def __init__(self, color, is_filled, radius):
-       super().__init__(color, is_filled) 
-       self.radius = radius
+book1 = Book("harry potter", "j.k.rowling")
 
-       
+library.add_book(book1)
+
+print(library.list_books())
