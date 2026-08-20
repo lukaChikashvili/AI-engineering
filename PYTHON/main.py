@@ -1,3 +1,7 @@
+#aggregation Aggregation is one of the ways objects relate to each other in OOP — 
+# specifically, it's a "has-a" relationship where one object contains or uses another 
+# object, but the contained object can exist independently of the container.
+
 class Library:
     def __init__(self, name):
         self.name = name
@@ -22,4 +26,5 @@ book1 = Book("harry potter", "j.k.rowling")
 
 library.add_book(book1)
 
-print(library.list_books())
+
+# composition - 
