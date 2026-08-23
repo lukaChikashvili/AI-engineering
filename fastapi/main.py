@@ -1,8 +1,18 @@
 from fastapi import FastAPI
+import json
 
 app = FastAPI()
 
-@app.get("/users/{user_id}")
 
-def get_user(user_id:int):
-    return { "user_id": user_id}
+def load_data():
+    with open('patients.json', 'r') as f:
+        data = json.load(f)
+
+    return data        
+
+
+@app.get('/view')
+def view():
+    data = load_data()
+
+    return data
