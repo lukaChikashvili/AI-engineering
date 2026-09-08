@@ -60,7 +60,7 @@ var reverseString = function(s) {
 
 console.log(reverseString(["h","e","l","l","o"]));
 
-
+// 283 - move zeros
 // Given an integer array nums, move all 0's to the end of it while maintaining 
 // the relative order of the non-zero elements.
 // Note that you must do this in-place without making a copy of the array.
@@ -81,7 +81,33 @@ var moveZeroes = function(nums) {
 
      for(let i = x; i < nums.length; i++) {
         nums[i] = 0;
-        
+
      }
 
+};
+
+
+// 485. Max Consecutive Ones
+// Given a binary array nums, return the maximum number of consecutive 1's in the array.
+// Input: nums = [1,1,0,1,1,1]
+//Output: 3
+//Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
+
+var findMaxConsecutiveOnes = function(nums) {
+     let currentCount = 0;
+     let maxCount = 0;
+
+     for(let i = 0; i < nums.length; i++) {
+        if(nums[i] == 1) {
+            currentCount++;
+
+        }else {
+            maxCount = Math.max(currentCount, maxCount);
+            currentCount = 0;
+
+        }
+     }
+
+     return Math.max(maxCount, currentCount);
+     
 };
