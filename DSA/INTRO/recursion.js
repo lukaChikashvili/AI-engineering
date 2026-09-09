@@ -11,4 +11,15 @@ const recursion = (num) => {
 }
 
 let a = 5;
-recursion(a);
+//recursion(a);
+
+
+// sum of first n numbers
+const sum = (n) => {
+   if(n == 0) return 0;
+
+   return n + sum(n-1);
+
+}
+
+console.log(sum(10));
