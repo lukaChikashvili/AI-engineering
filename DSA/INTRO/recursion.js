@@ -26,7 +26,7 @@ const sum = (n) => {
 
 // factorial
 const factorial = (n) => {
-    if(n == 1) return n;
+    if(n == 1) return 1;
 
    return n * factorial(n-1);
 
@@ -35,3 +35,15 @@ const factorial = (n) => {
 
 
 console.log(factorial(4));
+
+// power of two -231. Power of Two
+
+var isPowerOfTwo = function(n) {
+
+    if(n == 1) return true;
+    else if((n%2 != 0) || n < 1) return false;
+     
+     return isPowerOfTwo(n / 2);
+};
+
+console.log(isPowerOfTwo(n = 1))
